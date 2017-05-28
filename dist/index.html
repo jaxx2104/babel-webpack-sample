@@ -4,7 +4,13 @@
     <title>App</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <div id="app">
+      <p>
+        <router-link to="/" exact>Page1</router-link>
+        <router-link to="/bar">Page2</router-link>
+      </p>
+      <router-view></router-view>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
