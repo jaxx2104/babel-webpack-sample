@@ -1,24 +1,20 @@
-const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
   entry: {
-    app: './src/app.js',
+    main: './src/main.js',
   },
   output: {
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['env']
-        }
-      },
-    ],
+        loader: 'babel-loader'
+      }
+    ]
   }
 }
